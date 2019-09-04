@@ -35,7 +35,7 @@ ENV PROJECT=rift-projects \
     SHELL=/bin/bash \
     SOURCE=/src
 
-# COPY $PROJECT_DIR/requirements-dev.txt $SOURCE/$PROJECT/requirements-dev.txt
+COPY $PROJECT_DIR/requirements-dev.txt $SOURCE/$PROJECT/requirements-dev.txt
 COPY $PROJECT_DIR/requirements.txt $SOURCE/$PROJECT/requirements.txt
 
 # install python dependencies, and aws cli
