@@ -1,4 +1,4 @@
-#!/Users/jinchizhang/TeamGh/rift-projects/.venv/bin/python
+#!/home/jiz148/TeamGH/rift-projects/.venv/bin/python
 # -*- coding: utf-8 -*-
 import re
 import sys
