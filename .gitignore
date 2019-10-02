@@ -100,11 +100,14 @@ celerybeat-schedule
 # Environments
 .env
 .venv
+.venv/
+.venv.tee
 env/
 venv/
 ENV/
 env.bak/
 .idea
+.idea/
 venv.bak/
 
 # Spyder project settings
