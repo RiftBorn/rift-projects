@@ -26,10 +26,44 @@ class LinkedList:
         self._head_node = Node(ref_list[0])
         [self.add_value_to_the_end(item) for item in ref_list[1:]]
 
+    def add_value(self, position, value):
+        """
+        Add note to the specified position,
+        if position is larger than the length of linked list, place the new node to the end
+        @param position: <int> the position where the node should be placed, order is from 0
+        @param value: <value> the value to be added
+        """
+        if position == 0:
+            self.add_value_to_head(value)
+            return
+        new_node = Node(value)
+        count = 1
+        current = self._head_node
+        while current is not None:
+            if count == position:
+                new_node.set_link_node(current.get_link_node())
+                current.set_link_node(new_node)
+                return
+            current = current.get_link_node()
+            count += 1
+        self.add_value_to_the_end(value)
+
+    def add_value_to_head(self, value):
+        """
+        Add the value to the head of linked list
+        @param value, value to te be added
+        """
+        new_node = Node(value)
+        if not self._head_node:
+            self._head_node = new_node
+            return
+        new_node.set_link_node(self._head_node)
+        self._head_node = new_node
+
     def add_value_to_the_end(self, value):
         """
-        @param value: value to be added
         Add the value to the end of linked list
+        @param value: value to be added
         """
         new_node = Node(value)
         if not self._head_node:
